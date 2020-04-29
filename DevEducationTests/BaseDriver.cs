@@ -20,6 +20,7 @@ namespace DevEducationTests
         {
             driver = new ChromeDriver("D:\\");
             driver.Manage().Window.Maximize();
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
 
         }
         
