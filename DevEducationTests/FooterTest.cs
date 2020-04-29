@@ -27,7 +27,7 @@ namespace DevEducationTests
 
             string expRes = socialNetworkLinks.fbLink;
             Assert.AreEqual(expRes, actRes);
-            Thread.Sleep(2000);
+            //Thread.Sleep(2000);
 
         }
         [Test]
@@ -39,7 +39,7 @@ namespace DevEducationTests
 
             string expRes = socialNetworkLinks.instaLink;
             Assert.AreEqual(expRes, actRes);
-            Thread.Sleep(2000);
+            //Thread.Sleep(2000);
 
         }
 
@@ -53,7 +53,7 @@ namespace DevEducationTests
 
             string expRes = socialNetworkLinks.youTubeLink;
             Assert.AreEqual(expRes, actRes);
-            Thread.Sleep(2000);
+            //Thread.Sleep(2000);
 
         }
     }

@@ -70,7 +70,7 @@ namespace DevEducationTests
             IWebElement qaTitle = driver.FindElement(By.ClassName(coursesModel.qaTitleClass));
             string actRes = qaTitle.Text;
             Assert.AreEqual("Описание курса", actRes);
-            Thread.Sleep(2000);
+            //Thread.Sleep(2000);
 
         }
 
@@ -87,7 +87,7 @@ namespace DevEducationTests
 
             string actRes = driver.FindElement(By.XPath("/html/body/div[1]/main/section[2]/div/ol/ul[5]/li[1]")).Text;
             Assert.AreEqual("Элементы и примеры работ в JIRA", actRes);
-            Thread.Sleep(20000);
+            //Thread.Sleep(20000);
         }
 
         [Test]
@@ -101,7 +101,7 @@ namespace DevEducationTests
             IWebElement cSharpTitle = driver.FindElement(By.ClassName(coursesModel.cSharpTitleClass));
             string actRes = cSharpTitle.Text;
             Assert.AreEqual("Описание курса", actRes);
-            Thread.Sleep(2000);
+            //Thread.Sleep(2000);
 
         }
 
@@ -115,7 +115,7 @@ namespace DevEducationTests
 
             IWebElement qaTitle = driver.FindElement(By.XPath(coursesModel.week5Xpath));
             qaTitle.Click();
-            Thread.Sleep(2000);
+            //Thread.Sleep(2000);
             string actRes = driver.FindElement(By.XPath("/html/body/div[1]/main/section[2]/div/ol/ul[5]/li[1]")).Text;
             Assert.AreEqual("Введение в ООП. Классы и объекты", actRes);
         }

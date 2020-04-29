@@ -24,5 +24,7 @@ namespace DevEducationTests.POM
         public string bakuAdress = "проспект Бабека 10E, Rusel Plaza, 7 этаж";
 
         public string askAButtonXPath = "/html/body/div[1]/main/section[2]/div/button";
+        public string eMailInputXPath = "/html/body/div[1]/main/div[3]/div/div/form/div[2]/input";
+        public string sendButtonXPath = "/html/body/div[1]/main/div[3]/div/div/form/div[4]/button";
     }
 }

@@ -36,7 +36,7 @@ namespace DevEducationTests
             string actRes = telephone.Text;
             string expRes = contactsPage.dniproPhone;
             Assert.AreEqual(expRes, actRes);
-            Thread.Sleep(2000);
+        
         }
 
         [Test]
@@ -50,7 +50,7 @@ namespace DevEducationTests
             string actRes = address.Text;
             string expRes = contactsPage.kyivAdress;
             Assert.AreEqual(expRes, actRes);
-            Thread.Sleep(2000);
+         
         }
 
 
@@ -65,7 +65,7 @@ namespace DevEducationTests
             string actRes = address.Text;
             string expRes = contactsPage.bakuAdress;
             Assert.AreEqual(expRes, actRes);
-            Thread.Sleep(2000);
+
         }
 
         [Test]
@@ -76,20 +76,20 @@ namespace DevEducationTests
             button.Click();
 
             IWebElement nameInput = driver.FindElement(By.Name("name"));
-            nameInput.SendKeys("Vova");
+            nameInput.SendKeys("Test");
 
-            IWebElement eMailInput = driver.FindElement(By.XPath("/html/body/div[1]/main/div[3]/div/div/form/div[2]/input"));
-            eMailInput.SendKeys("vova@gmail.com");
+            IWebElement eMailInput = driver.FindElement(By.XPath(contactsPage.eMailInputXPath));
+            eMailInput.SendKeys("test@test.com");
 
             IWebElement messageInput = driver.FindElement(By.Name("message"));
             messageInput.SendKeys("Hello. How are you? This is my homework.");
 
-            IWebElement sendButton = driver.FindElement(By.XPath("/html/body/div[1]/main/div[3]/div/div/form/div[4]/button"));
+            IWebElement sendButton = driver.FindElement(By.XPath(contactsPage.sendButtonXPath));
             //sendButton.Click();
             Assert.AreEqual(true, true);
 
 
-            Thread.Sleep(2000);
+            //Thread.Sleep(2000);
         }
 
 

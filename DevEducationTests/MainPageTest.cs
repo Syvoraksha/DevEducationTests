@@ -94,7 +94,7 @@ namespace DevEducationTests
             driver.Url = Urls.mainPage;
             IWebElement coursesButton = driver.FindElement(By.XPath(pageModel.courseMenuButtonXPath));
             coursesButton.Click();
-            Thread.Sleep(2000);
+            //Thread.Sleep(2000);
             IWebElement ourCoursesLabel = driver.FindElement(By.TagName(coursesModel.ourCoursesLabelTagName));
             string actResult = ourCoursesLabel.Text;
             Assert.AreEqual("Наши курсы", actResult);
@@ -106,7 +106,7 @@ namespace DevEducationTests
             driver.Url = Urls.mainPage;
             IWebElement graduatessButton = driver.FindElement(By.XPath(pageModel.graduatesMenuButtonXPath));
             graduatessButton.Click();
-            Thread.Sleep(2000);
+            //Thread.Sleep(2000);
             IWebElement ourCoursesLabel = driver.FindElement(By.TagName(graduatesModel.graduatessLabelTagName));
             string actResult = ourCoursesLabel.Text;
             Assert.AreEqual("Наши выпускники", actResult);
@@ -118,7 +118,7 @@ namespace DevEducationTests
             driver.Url = Urls.mainPage;
             IWebElement newsButton = driver.FindElement(By.XPath(pageModel.newsMenuButtonXPath));
             newsButton.Click();
-            Thread.Sleep(5000);
+            //Thread.Sleep(5000);
             IWebElement newsLabel = driver.FindElement(By.TagName(newsModel.newsCoursesLabelTagName));
             string actResult = newsLabel.Text;
             Assert.AreEqual("Новости", actResult);
@@ -131,7 +131,7 @@ namespace DevEducationTests
             driver.Url = Urls.mainPage;
             IWebElement blogMButton = driver.FindElement(By.XPath(pageModel.blogMenuButtonXPath));
             blogMButton.Click();
-            Thread.Sleep(5000);
+            //Thread.Sleep(5000);
             IWebElement blogMLabel = driver.FindElement(By.TagName(blogModel.blogLabelTagName));
             string actResult = blogMLabel.Text;
             Assert.AreEqual("Блог", actResult);
@@ -143,7 +143,7 @@ namespace DevEducationTests
             driver.Url = Urls.mainPage;
             IWebElement aboutUsMButton = driver.FindElement(By.XPath(pageModel.aboutUsMenuButtonXPath));
             aboutUsMButton.Click();
-            Thread.Sleep(5000);
+            //Thread.Sleep(5000);
             IWebElement aboutUsMLabel = driver.FindElement(By.TagName(aboutUsModel.aboutUsLabelTagName));
             string actResult = aboutUsMLabel.Text;
             Assert.AreEqual("О нас", actResult);
@@ -155,7 +155,7 @@ namespace DevEducationTests
             driver.Url = Urls.mainPage;
             IWebElement contactsUsMButton = driver.FindElement(By.XPath(pageModel.contactsMenuButtonXPath));
             contactsUsMButton.Click();
-            Thread.Sleep(5000);
+            //Thread.Sleep(5000);
             IWebElement contactsMLabel = driver.FindElement(By.TagName(contactsModel.contactsLabelTagName));
             string actResult = contactsMLabel.Text;
             Assert.AreEqual("Наши контакты", actResult);
@@ -172,7 +172,7 @@ namespace DevEducationTests
             {
                 driver.Url = Urls.mainPage;
                 IWebElement contactsUsMButton = driver.FindElement(By.ClassName("lang-switcher-header-btn"));
-                Thread.Sleep(5000);
+                //Thread.Sleep(5000);
                 string actResult = contactsUsMButton.Text;
                 Assert.AreEqual("RU", actResult);
             }
@@ -180,7 +180,7 @@ namespace DevEducationTests
             {
                 driver.Url = Urls.mainPageUA;
                 IWebElement contactsUsMButton = driver.FindElement(By.ClassName("lang-switcher-header-btn"));
-                Thread.Sleep(5000);
+                //Thread.Sleep(5000);
                 string actResult = contactsUsMButton.Text;
                 Assert.AreEqual("UA", actResult);
             }
@@ -188,7 +188,7 @@ namespace DevEducationTests
             {
                 driver.Url = Urls.mainPageEN;
                 IWebElement contactsUsMButton = driver.FindElement(By.ClassName("lang-switcher-header-btn"));
-                Thread.Sleep(5000);
+                //Thread.Sleep(5000);
                 string actResult = contactsUsMButton.Text;
                 Assert.AreEqual("EN", actResult);
             }
@@ -196,7 +196,7 @@ namespace DevEducationTests
             {
                 driver.Url = Urls.mainPageAZ;
                 IWebElement contactsUsMButton = driver.FindElement(By.ClassName("lang-switcher-header-btn"));
-                Thread.Sleep(5000);
+                //Thread.Sleep(5000);
                 string actResult = contactsUsMButton.Text;
                 Assert.AreEqual("AZ", actResult);
             }
