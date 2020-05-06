@@ -1,6 +1,5 @@
 ﻿using DevEducationTests.POM;
 using NUnit.Framework;
-using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,86 +11,66 @@ namespace DevEducationTests
 {
     public class OurContactsTest: BaseDriver
     {
-        ContactsPageModel contactsPage;
-        public OurContactsTest()
-        {
-            contactsPage = new ContactsPageModel();
-        }
-        [Test]
-        public void CheckAddressDnipro()
-        {
-            driver.Url = Urls.contactsPage;
-            IWebElement address = driver.FindElement(By.XPath(contactsPage.dniproAdressXPath));
-            string actRes = address.Text;
-            string expRes = contactsPage.dniproAdress;
-            Assert.AreEqual(expRes, actRes);
+        ContactsPageModel contactsPageModel;
 
-        }
         [Test]
-        public void CheckPhoneDnipro()
+        public void CheckKyivAdress()
         {
-            driver.Url = Urls.contactsPage;
+            contactsPageModel = new ContactsPageModel(driver);
+            driver.Url = Urls.contactPage;
+            string actResult = contactsPageModel
+            .FindKyivButton()
+            .ClickKyivButton()
+            .FindKyivLabel()
+            .GetTextFromKyivAdressLabel();
 
-            IWebElement telephone = driver.FindElement(By.XPath(contactsPage.dniproPhoneXPath));
-            string actRes = telephone.Text;
-            string expRes = contactsPage.dniproPhone;
-            Assert.AreEqual(expRes, actRes);
-        
+            Assert.AreEqual(contactsPageModel.kyivAdress, actResult);
         }
 
         [Test]
-        public void CheckAddressKyiv()
+        public void CheckDniproAdress()
         {
-            driver.Url = Urls.contactsPage;
-            IWebElement buttonKyiv = driver.FindElement(By.XPath(contactsPage.kyivAButtonXPath));
-            buttonKyiv.Click();
+            contactsPageModel = new ContactsPageModel(driver);
+            driver.Url = Urls.contactPage;
+            string actResult = contactsPageModel
+            .FindDniproButton()
+            .ClickDniproButton()
+            .FindDniproLabel()
+            .GetTextFromDniproAdressLabel();
 
-            IWebElement address = driver.FindElement(By.XPath(contactsPage.kyivAdressXPath));
-            string actRes = address.Text;
-            string expRes = contactsPage.kyivAdress;
-            Assert.AreEqual(expRes, actRes);
-         
+            Assert.AreEqual(contactsPageModel.dniproAdress, actResult);
         }
 
-
         [Test]
-        public void CheckAddressBaku()
+        public void CheckBakuAdress()
         {
-            driver.Url = Urls.contactsPage;
-            IWebElement buttonKyiv = driver.FindElement(By.XPath(contactsPage.bakuAButtonXPath));
-            buttonKyiv.Click();
+            contactsPageModel = new ContactsPageModel(driver);
+            driver.Url = Urls.contactPage;
+            string actResult = contactsPageModel
+            .FindBakuButton()
+            .ClickBakuButton()
+            .FindBakuLabel()
+            .GetTextFromBakuAdressLabel();
 
-            IWebElement address = driver.FindElement(By.XPath(contactsPage.bakuAdressXPath));
-            string actRes = address.Text;
-            string expRes = contactsPage.bakuAdress;
-            Assert.AreEqual(expRes, actRes);
-
+            Assert.AreEqual(contactsPageModel.bakuAdress, actResult);
         }
 
         [Test]
         public void CheckAskQuestion()
         {
-            driver.Url = Urls.contactsPage;
-            IWebElement button = driver.FindElement(By.XPath(contactsPage.askAButtonXPath));
-            button.Click();
+            contactsPageModel = new ContactsPageModel(driver);
+            driver.Url = Urls.contactPage;
+            contactsPageModel
+            .FindAskQuestionButton()
+            .ClickAskQuestioonButton()
+            .FindInputNameField()
+            .InputNameInField()
+            .FindInputEmailField()
+            .InputEmailInField()
+            .FindInputMessageField()
+            .InputMessageInField();
 
-            IWebElement nameInput = driver.FindElement(By.Name("name"));
-            nameInput.SendKeys("Test");
-
-            IWebElement eMailInput = driver.FindElement(By.XPath(contactsPage.eMailInputXPath));
-            eMailInput.SendKeys("test@test.com");
-
-            IWebElement messageInput = driver.FindElement(By.Name("message"));
-            messageInput.SendKeys("Hello. How are you? This is my homework.");
-
-            IWebElement sendButton = driver.FindElement(By.XPath(contactsPage.sendButtonXPath));
-            //sendButton.Click();
             Assert.AreEqual(true, true);
-
-
-            //Thread.Sleep(2000);
         }
-
-
     }
 }

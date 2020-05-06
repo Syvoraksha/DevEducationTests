@@ -10,8 +10,7 @@ using System.Threading.Tasks;
 namespace DevEducationTests
 {
     public class BaseDriver
-    {
-     
+    {     
         public IWebDriver driver;
 
         [SetUp]
@@ -20,8 +19,6 @@ namespace DevEducationTests
         {
             driver = new ChromeDriver("D:\\");
             driver.Manage().Window.Maximize();
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-
         }
         
         [TearDown]

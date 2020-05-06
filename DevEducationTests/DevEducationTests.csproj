@@ -53,17 +53,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseDriver.cs" />
-    <Compile Include="CoursesPageTest.cs" />
     <Compile Include="FooterTest.cs" />
     <Compile Include="MainPageTest.cs" />
     <Compile Include="OurContactsTest.cs" />
-    <Compile Include="POM\AboutUsPageModel.cs" />
-    <Compile Include="POM\BlogPageModel.cs" />
     <Compile Include="POM\ContactsPageModel.cs" />
     <Compile Include="POM\CoursesPageModel.cs" />
-    <Compile Include="POM\GraduatesPageModel.cs" />
+    <Compile Include="POM\FAQPageModel.cs" />
     <Compile Include="POM\MainPageModel.cs" />
-    <Compile Include="POM\NewsPageModel.cs" />
     <Compile Include="POM\SignUpPageModel.cs" />
     <Compile Include="POM\SocialNetworkLinks.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

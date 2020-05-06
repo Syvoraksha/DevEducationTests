@@ -12,9 +12,6 @@ namespace DevEducationTests
         public static string mainPageUA = "https://deveducation.com/ua/";
         public static string mainPageEN = "https://deveducation.com/en/";
         public static string mainPageAZ = "https://deveducation.com/az/";
-        public static string coursesPage = "https://deveducation.com/courses/";
-        public static string contactsPage = "https://deveducation.com/contacts/";
-
-
+        public static string contactPage = "https://deveducation.com/contacts/";
     }
 }
