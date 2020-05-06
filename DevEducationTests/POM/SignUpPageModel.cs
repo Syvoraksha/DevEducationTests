@@ -10,13 +10,13 @@ namespace DevEducationTests.POM
 {
     public class SignUpPageModel
     {
-        //public By сourseButtonLabelClassName = By.ClassName("modal-btn");
+      
         public By inputFIOLabelName = By.Name("entry.317589276");
         public By inputTelLabelName = By.Name("entry.870452131");
         public By inputMailLabelName = By.Name("entry.1133896419");
 
         private IWebDriver _driver;
-       //IWebElement сourseButtonElement;
+
         IWebElement inputFIOElement;
         IWebElement inputTelElement;
         IWebElement inputMailElement;

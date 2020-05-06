@@ -41,70 +41,70 @@ namespace DevEducationTests.POM
         public MainPageModel FindMainLabel()
         {
             mainLabelElement = _driver.FindElement(mainLabel);
-            return this; //вернуть этот же класс(в котором мы и пишем метод)
+            return this;
         }
         public MainPageModel FindCourseMenuButtonLabel()
         {
             courseMenuButtonElement = _driver.FindElement(courseMenuButton);
-            return this; //вернуть этот же класс(в котором мы и пишем метод)
+            return this; 
         }
         public MainPageModel FindNewsMenuButtonLabel()
         {
             newsMenuButtonElement = _driver.FindElement(newsMenuButton);
-            return this; //вернуть этот же класс(в котором мы и пишем метод)
+            return this;
         }
 
         public MainPageModel FindGraduatesMenuButtonLabel()
         {
             graduatesMenuButtonElement = _driver.FindElement(graduatesMenuButton);
-            return this; //вернуть этот же класс(в котором мы и пишем метод)
+            return this;
         }
 
         public MainPageModel FindBlogMenuButtonLabel()
         {
             blogMenuButtonElement = _driver.FindElement(blogMenuButton);
-            return this; //вернуть этот же класс(в котором мы и пишем метод)
+            return this; 
         }
 
         public MainPageModel FindAboutUsMenuButtonLabel()
         {
             aboutUsMenuButtonElement = _driver.FindElement(aboutUsMenuButton);
-            return this; //вернуть этот же класс(в котором мы и пишем метод)
+            return this; 
         }
 
         public MainPageModel FindContactsMenuButtonLabel()
         {
             contactsMenuButtonElement = _driver.FindElement(contactsMenuButton);
-            return this; //вернуть этот же класс(в котором мы и пишем метод)
+            return this; 
         }
 
         public MainPageModel FindLanguageBarLabel()
         {
             languageBarElement = _driver.FindElement(languageBar);
-            return this; //вернуть этот же класс(в котором мы и пишем метод)
+            return this; 
         }
 
         public MainPageModel FindSignUp()
         {
             signUpButtonElement = _driver.FindElement(signUpButtonLabelClassName);
-            return this; //вернуть этот же класс(в котором мы и пишем метод)
+            return this; 
         }
 
         public MainPageModel FindFAQButton()
         {
             FAQButtonElement = _driver.FindElement(FAQButton);
-            return this; //вернуть этот же класс(в котором мы и пишем метод)
+            return this; 
         }
 
 
 
-        //метод получения текста
+   
         public string GetTextFromMainLabel()
         {
             return mainLabelElement.Text;
         }
 
-        //
+      
         public string GetTextFromCoursesMenuButton()
         {
             return courseMenuButtonElement.Text;
@@ -144,7 +144,7 @@ namespace DevEducationTests.POM
         public CoursesPageModel ClickOnCourseButton()
         {
             courseMenuButtonElement.Click();
-            return new CoursesPageModel(_driver); //возвращаем другой класс
+            return new CoursesPageModel(_driver); 
         }
 
         public FAQPageModel ClickOnFAQButton()
@@ -156,7 +156,7 @@ namespace DevEducationTests.POM
         public SignUpPageModel ClickOnSignUp()
         {
             signUpButtonElement.Click();
-            return new SignUpPageModel(_driver); //возвращаем другой класс
+            return new SignUpPageModel(_driver); 
         }
 
 

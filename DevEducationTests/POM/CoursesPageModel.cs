@@ -9,10 +9,8 @@ namespace DevEducationTests.POM
 {
     public class CoursesPageModel
     {
-        //public string ourCoursesLabelTagName = "h1";
         public By ourCoursesLabel = By.TagName("h1");
         IWebElement coursesLabel;
-        //чтобы не передавать драйвер в каждый метод, делаем его в модели
         private IWebDriver _driver;
         public CoursesPageModel(IWebDriver driver)
         {
